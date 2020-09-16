@@ -57,7 +57,6 @@ function writeToDocument(url) {
             tableRows.push(`<tr>${dataRow}</tr>`);
         });
 
-        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`;
+        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, "");/* / states it is a regular expression an g means find all instances of comma and "" states that all , will be replaced by and empty string*/
     });
 }
-
